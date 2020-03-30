@@ -1,0 +1,151 @@
+{"value": [
+  {
+    "_1": {
+      "id": 2,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.757904,
+      "longitude": 37.597563,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 1,
+      "name": "Государственный академический  малый театр",
+      "category": "Театр",
+      "description": "Государственный академический малый театр...",
+      "latitude": 55.760176,
+      "longitude": 37.619699,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.0222522915673829
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T05:00:00.000+03:00",
+      "latitude": 55.769786,
+      "longitude": 37.601826,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 1,
+      "name": "Государственный академический  малый театр",
+      "category": "Театр",
+      "description": "Государственный академический малый театр...",
+      "latitude": 55.760176,
+      "longitude": 37.619699,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.020292762971065404
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T01:00:00.000+03:00",
+      "latitude": 55.752161,
+      "longitude": 37.590964,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 1,
+      "name": "Государственный академический  малый театр",
+      "category": "Театр",
+      "description": "Государственный академический малый театр...",
+      "latitude": 55.760176,
+      "longitude": 37.619699,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.029831869703387054
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T10:00:00.000+03:00",
+      "latitude": 55.747496,
+      "longitude": 37.601826,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 2,
+      "name": "Музей Ю. В. Никулина",
+      "category": "Музей",
+      "description": "Музей Ю. В. Никулина...",
+      "latitude": 55.757666,
+      "longitude": 37.634706,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.034416904276822445
+  },
+  {
+    "_1": {
+      "id": 2,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.757904,
+      "longitude": 37.597563,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 4,
+      "name": "Bolshoi театр",
+      "category": "Театр",
+      "description": "Big театр...",
+      "latitude": 55.770176,
+      "longitude": 37.619123,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.024807974201855685
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T05:00:00.000+03:00",
+      "latitude": 55.769786,
+      "longitude": 37.601826,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 4,
+      "name": "Bolshoi театр",
+      "category": "Театр",
+      "description": "Big театр...",
+      "latitude": 55.770176,
+      "longitude": 37.619123,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.017301396157535096
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T01:00:00.000+03:00",
+      "latitude": 55.752161,
+      "longitude": 37.590964,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 4,
+      "name": "Bolshoi театр",
+      "category": "Театр",
+      "description": "Big театр...",
+      "latitude": 55.770176,
+      "longitude": 37.619123,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "distance": 0.03342857319719266
+  }
+]
+}
+
