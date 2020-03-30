@@ -12,13 +12,15 @@ object HelloWorld {
     val sc = new SparkContext(conf)
     implicit val spark: SparkSession = SparkSession.builder().config(conf).getOrCreate()
 
+    //создаем датасет персон из захардкоженной коллекции объектов
     val persons = generatePersonsDataSet
     persons.show
 
+    //создаем датасет мест
     val places = generatePlacesDataSet
     places.show
 
-//  save data as bucket tables, partitioned by regionId to avoid cross-partition's interaction
+    //сохраняем датасеты как bucket tables, репартицируем по regionId чтобы как можно больше распараллелить работу и избежать взаимодействий между нодами
     persons.write.bucketBy(50, "regionId").saveAsTable("persons")
     places.write.bucketBy(50, "regionId").saveAsTable("places")
 
@@ -26,14 +28,18 @@ object HelloWorld {
     val filteredPlaces = filterDuplicatedPlaces(places)
     filteredPlaces.show
 
+    //джойним два датасета, добавляем колонку distance - расстояние между персоной и местом
     val personsToPlacesWithTheSameRegionIdAndYetActive = joinPersonsAndPlacesWithDistanceColumn(persons, filteredPlaces)
-
+    //из всех сочетаний персона-место выбираем только самое ближайшее (topNearestPlaces = 1, можно выдавать
+    //для каждой записи о персоне топ 5 ближайших мест, тогда topNearestPlaces = 5)
     val topNearestPlaces = 1
     val suggestions = selectTopNNearestPlacesForEachPerson(personsToPlacesWithTheSameRegionIdAndYetActive, topNearestPlaces)
 
+    //для красоты вывода маппим поля в получившемся датафрейме на описанные в задании
     defineOutputColumns(suggestions).show
 
-//    пауза до ввода ENTER, для просмотра результатов в web ui
+//    для просмотра результатов выполнения джобы в web ui нужно выставить паузу, иначе SparkContext сразу же закроется вместе с web ui
+//    пауза до ввода ENTER в консоли
 //    System.in.read()
     sc.stop
   }
@@ -53,8 +59,9 @@ object HelloWorld {
   // но тогда название будет первым попавшимся из множества с уникальной широтой и долготой
   def filterDuplicatedPlaces(ds: Dataset[Place]): Dataset[Place] = ds.dropDuplicates(Seq("latitude", "longitude"))
 
-  // джойним персон с местами по идентификатору области, но при этом, чтобы дата места (последнее обновление по этому месту)
-  // было активно на момент посещения персоной
+  // джойним персон с местами по идентификатору области (нет смысла предлагать персоне достопримечательности в другом городе),
+  // дата места - последнее обновление по этому месту, если дата места давно не обновлялась предполагаем,
+  // что место закрылось/на реконструкции -> нельзя его рекомендовать, нужно чтобы место было активно на момент посещения персоной
   def joinPersonsAndPlacesWithDistanceColumn(persons: Dataset[Person], places: Dataset[Place]): DataFrame = persons
       .joinWith(places,
         persons("regionId") === places("regionId") &&
@@ -62,7 +69,8 @@ object HelloWorld {
       )
       .withColumn("distance", distanceBetweenTwoPoint("_1.latitude", "_2.latitude", "_1.longitude", "_2.longitude"))
 
-  // оконной функцией рассчитываем рейтинг удаленности каждого места от персоны и оставляем топ N, где N - параметр функции
+  // имея сочетания запись о персоне - место - расстояние между ними, оконной функцией рассчитываем рейтинг удаленности
+  // для каждого сочетания персона-место, оставляем топ N самых близких мест для персоны, где N - параметр функции
   def selectTopNNearestPlacesForEachPerson(df: DataFrame, topN: Int)(implicit spark: SparkSession): DataFrame = {
     import spark.implicits._
     val window = Window.partitionBy("_1").orderBy("distance")
@@ -72,6 +80,7 @@ object HelloWorld {
       .orderBy("_1")
   }
 
+  // маппим "технические" имена колонок на "бизнесовые"
   def defineOutputColumns(ds: DataFrame): DataFrame = {
     ds.select(
         col("_1.id").alias("Идентификатор персоны"),
@@ -109,5 +118,10 @@ object HelloWorld {
     ).toDS
   }
 
+  //задача: оценить расстояние между двумя точками, зная их широту и долготу, сравнивать расстояния будем в пределах одного города,
+  //тогда карта города достаточно точно может быть представлена как двумерная x-y плоскость
+  //расчитывать расстояние между двумя точками будем по теореме пифагора, где
+  //катеты: |x2 - x1| = a и |y2 - y1| = b
+  //искомая гипотенуза: sqrt(a^2 + b^2)
   def distanceBetweenTwoPoint(x1: String, x2: String, y1: String, y2: String): Column = sqrt(pow(col(x1) - col(x2),2) + pow(col(y1) - col(y2), 2))
 }
