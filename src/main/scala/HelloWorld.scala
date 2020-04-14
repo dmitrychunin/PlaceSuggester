@@ -1,7 +1,7 @@
 import java.sql.{Date, Timestamp}
 
 import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.functions.{window, _}
+import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Column, DataFrame, Dataset, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 
