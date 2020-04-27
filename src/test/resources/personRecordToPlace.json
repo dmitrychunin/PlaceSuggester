@@ -1,0 +1,232 @@
+[
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T01:00:00.000+03:00",
+      "latitude": 55.760186,
+      "longitude": 37.619789,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 1,
+      "name": "Государственный академический  малый театр",
+      "category": "Театр",
+      "description": "Государственный академический малый театр...",
+      "latitude": 55.760176,
+      "longitude": 37.619699,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T10:00:00.000+03:00",
+      "latitude": 55.737766,
+      "longitude": 37.634806,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 3,
+      "name": "Дореволюционная усадьба",
+      "category": "Дом",
+      "description": "Дореволюционная усадьба...",
+      "latitude": 55.737666,
+      "longitude": 37.634706,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 2,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.789234,
+      "longitude": 37.236724,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 2,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.737766,
+      "longitude": 37.634806,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 3,
+      "name": "Дореволюционная усадьба",
+      "category": "Дом",
+      "description": "Дореволюционная усадьба...",
+      "latitude": 55.737666,
+      "longitude": 37.634706,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 2,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.770276,
+      "longitude": 37.619133,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 4,
+      "name": "Большой театр",
+      "category": "Театр",
+      "description": "Big театр...",
+      "latitude": 55.770176,
+      "longitude": 37.619123,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 3,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.737703,
+      "longitude": 37.634759,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 3,
+      "name": "Дореволюционная усадьба",
+      "category": "Дом",
+      "description": "Дореволюционная усадьба...",
+      "latitude": 55.737666,
+      "longitude": 37.634706,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 4,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.760154,
+      "longitude": 37.619736,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 1,
+      "name": "Государственный академический  малый театр",
+      "category": "Театр",
+      "description": "Государственный академический малый театр...",
+      "latitude": 55.760176,
+      "longitude": 37.619699,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 4,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.765312,
+      "longitude": 37.616623,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 5,
+      "name": "Консерватория",
+      "category": "Театр",
+      "description": "Big театр...",
+      "latitude": 55.765297,
+      "longitude": 37.616578,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 4,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.775573,
+      "longitude": 37.612323,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 6,
+      "name": "Кремль",
+      "category": "Театр",
+      "description": "Big театр...",
+      "latitude": 55.775623,
+      "longitude": 37.612359,
+      "regionId": 1,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 1,
+      "time": "2019-02-02T05:00:00.000+03:00",
+      "latitude": 55.757766,
+      "longitude": 37.634806,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 2,
+      "name": "Музей Ю. В. Никулина",
+      "category": "Музей",
+      "description": "Музей Ю. В. Никулина...",
+      "latitude": 55.757666,
+      "longitude": 37.634706,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 2,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.757566,
+      "longitude": 37.634606,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 2,
+      "name": "Музей Ю. В. Никулина",
+      "category": "Музей",
+      "description": "Музей Ю. В. Никулина...",
+      "latitude": 55.757666,
+      "longitude": 37.634706,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    }
+  },
+  {
+    "_1": {
+      "id": 3,
+      "time": "2019-02-01T07:00:00.000+03:00",
+      "latitude": 55.757698,
+      "longitude": 37.634567,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    },
+    "_2": {
+      "id": 2,
+      "name": "Музей Ю. В. Никулина",
+      "category": "Музей",
+      "description": "Музей Ю. В. Никулина...",
+      "latitude": 55.757666,
+      "longitude": 37.634706,
+      "regionId": 2,
+      "firstDayDate": "2019-02-01"
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "personId1": 2,
+    "placeId2": 1,
+    "similarCount": 0.6666666666666666
+  },
+  {
+    "personId1": 1,
+    "placeId2": 4,
+    "similarCount": 0.6666666666666666
+  },
+  {
+    "personId1": 3,
+    "placeId2": 4,
+    "similarCount": 1.0
+  },
+  {
+    "personId1": 3,
+    "placeId2": 1,
+    "similarCount": 1.0
+  }
+]
